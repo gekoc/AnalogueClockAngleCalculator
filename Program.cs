@@ -1,6 +1,6 @@
 ﻿internal class Program
 {
-    public static void Main(string[] args)
+    private static void Main(string[] args)
     {
         var hours = GetHoursInput();
         var minutes = GetMinutesInput();
@@ -31,7 +31,7 @@
         var minutes = 0;
 
         while (!int.TryParse(input, out minutes) || !(minutes >= 0 && minutes <= 59)){
-            Console.WriteLine("Please enter a value between 1 and 12");
+            Console.WriteLine("Please enter a value between 0 and 59");
             input = Console.ReadLine();
         }
 
